@@ -1,10 +1,8 @@
-import { observer as obs } from 'mobx-react'
+import { observer } from 'mobx-react'
 
-const observers = fns => {
-  Object.keys(fns).forEach(key => {
-    fns[key] = obs(fns[key])
+export default func => {
+  Object.keys(func).forEach(key => {
+    func[key] = observer(func[key])
   })
-  return fns
+  return func
 }
-
-export default observers
