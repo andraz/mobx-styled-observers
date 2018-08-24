@@ -1,0 +1,24 @@
+{
+  "name": "mobx-styled-observers-mobx-state-tree-styled-components-as-views",
+  "version": "0.0.63",
+  "description": "Why wrap business logic into component life-cycle methods when you can have views returning styled components.",
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "mobx": "5.0.4",
+    "mobx-react": "5.2.5",
+    "mobx-state-tree": "3.2.3",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "styled-components": "3.4.5"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
