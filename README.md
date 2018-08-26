@@ -1,4 +1,4 @@
-# Views returning styled components.
+## Source of truth views returning styled components
 
 demo: https://codesandbox.io/s/github/andraz/mobx-styled-observers
 
