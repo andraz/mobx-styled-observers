@@ -1,7 +1,8 @@
 import React from 'react'
-import Button from './button'
 import { types } from 'mobx-state-tree'
-import { observers } from './util'
+
+import button from './button.component'
+const { CountButton, TextButton } = button
 
 export default types
   .model({
@@ -27,15 +28,13 @@ export default types
     },
     get countButtonText() {
       return `${todo.donePlay} ${todo.count}`
+    },
+    get TextButton() {
+      // wrap store into the returned styled component via closure
+      return () => <TextButton todo={todo} />
+    },
+    get CountButton() {
+      // getter can use same name as the component
+      return () => <CountButton todo={todo} /> // component name
     }
   }))
-  .views(todo =>
-    observers({
-      TextButton: () => (
-        <Button onClick={todo.toggle}>{todo.textButtonText}</Button>
-      ),
-      CountButton: () => (
-        <Button onClick={todo.toggle}>{todo.countButtonText}</Button>
-      )
-    })
-  )
