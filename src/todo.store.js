@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './button'
 import { types } from 'mobx-state-tree'
-import observers from './observers'
+import { observers } from './util'
 
 export default types
   .model({
