@@ -1,6 +1,5 @@
 import React from 'react'
 import { types } from 'mobx-state-tree'
-import { observer } from 'mobx-react'
 
 import { CountButton, TextButton } from '../component/button'
 import { TextInput } from '../component/input'
