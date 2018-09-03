@@ -17,16 +17,18 @@ const { CountButton, TextButton, TextInput } = todo
 const App = () => (
   <Fragment>
     <p>mobx-styled-observers = mobx-state-tree + styled-components as views</p>
+    <h3>{'<TextInput />'}</h3>
     <TextInput />
-    <todo2.TextInput />
-    <h3>CountButton</h3>
+    <h3>{'<CountButton />'}</h3>
     <CountButton />
-    <h3>todo2.CountButton</h3>
-    <todo2.CountButton />
-    <h3>TextButton</h3>
+    <h3>{'<TextButton />'}</h3>
     <TextButton />
-    <h3>todo2.TextButton</h3>
-    <todo2.TextButton />
+    <h3>todo2.___</h3>
+    <div style={{ width: '500px' }}>
+      <todo2.TextInput />
+      <todo2.CountButton />
+      <todo2.TextButton />
+    </div>
   </Fragment>
 )
 

@@ -35,13 +35,13 @@ export default types
     },
     get TextButton() {
       // wrap store into the returned styled component via closure
-      return observer(() => <TextButton todo={todo} />) // use observer to autorefresh
+      return () => <TextButton todo={todo} />
     },
     get CountButton() {
       // getter can use same name and TitleCase as the component
-      return observer(() => <CountButton todo={todo} />) // component name
+      return () => <CountButton todo={todo} /> // component name
     },
     get TextInput() {
-      return observer(() => <TextInput todo={todo} />)
+      return () => <TextInput todo={todo} />
     }
   }))
