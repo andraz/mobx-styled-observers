@@ -33,14 +33,24 @@ export default types
       return `${todo.donePlay} ${todo.count}`
     },
     get TextButton() {
-      // wrap store into the returned styled component via closure
+      // pass store into the returned styled component
       return () => <TextButton todo={todo} />
     },
     get CountButton() {
-      // getter can use same name and TitleCase as the component
-      return () => <CountButton todo={todo} /> // component name
+      // getter uses same name as the component
+      return () => <CountButton todo={todo} />
     },
     get TextInput() {
       return () => <TextInput todo={todo} />
+    },
+    get All() {
+      // render generic UI by rendering a single JSX element
+      return () => (
+        <div style={{ width: '500px' }}>
+          <todo.TextInput />
+          <todo.CountButton />
+          <todo.TextButton />
+        </div>
+      )
     }
   }))

@@ -23,12 +23,9 @@ const App = () => (
     <CountButton />
     <h3>{'<TextButton />'}</h3>
     <TextButton />
-    <h3>todo2.___</h3>
-    <div style={{ width: '500px' }}>
-      <todo2.TextInput />
-      <todo2.CountButton />
-      <todo2.TextButton />
-    </div>
+
+    <h3>{'<todo2.All />'}</h3>
+    <todo2.All />
   </Fragment>
 )
 
