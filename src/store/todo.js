@@ -1,8 +1,9 @@
 import React from 'react'
 import { types } from 'mobx-state-tree'
+import { observer } from 'mobx-react'
 
-import button from './button.component'
-const { CountButton, TextButton } = button
+import { CountButton, TextButton } from '../component/button'
+import { TextInput } from '../component/input'
 
 export default types
   .model({
@@ -14,6 +15,9 @@ export default types
     toggle() {
       todo.done = !todo.done
       todo.count++
+    },
+    onInputChange(e) {
+      todo.text = e.target.value
     }
   }))
   .views(todo => ({
@@ -31,10 +35,13 @@ export default types
     },
     get TextButton() {
       // wrap store into the returned styled component via closure
-      return () => <TextButton todo={todo} />
+      return observer(() => <TextButton todo={todo} />) // use observer to autorefresh
     },
     get CountButton() {
-      // getter can use same name as the component
-      return () => <CountButton todo={todo} /> // component name
+      // getter can use same name and TitleCase as the component
+      return observer(() => <CountButton todo={todo} />) // component name
+    },
+    get TextInput() {
+      return observer(() => <TextInput todo={todo} />)
     }
   }))

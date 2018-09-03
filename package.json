@@ -5,9 +5,9 @@
   "keywords": [],
   "main": "index.js",
   "dependencies": {
-    "mobx": "5.0.4",
+    "mobx": "5.1.0",
     "mobx-react": "5.2.5",
-    "mobx-state-tree": "3.2.3",
+    "mobx-state-tree": "3.2.4",
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "styled-components": "3.4.5"

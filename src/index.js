@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { render } from 'react-dom'
 
-import Todo from './todo.store'
+import Todo from './store/todo'
 
 const todo = Todo.create({
   text: 'mobx-state-tree & styled-components'
@@ -12,11 +12,13 @@ const todo2 = Todo.create({
 })
 
 // components can be unwrapped to reduce visual clutter
-const { CountButton, TextButton } = todo
+const { CountButton, TextButton, TextInput } = todo
 
 const App = () => (
   <Fragment>
     <p>mobx-styled-observers = mobx-state-tree + styled-components as views</p>
+    <TextInput />
+    <todo2.TextInput />
     <h3>CountButton</h3>
     <CountButton />
     <h3>todo2.CountButton</h3>
