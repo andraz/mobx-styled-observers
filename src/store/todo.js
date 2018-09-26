@@ -32,6 +32,10 @@ export default types
     get countButtonText() {
       return `${todo.donePlay} ${todo.count}`
     },
+
+    // mixing data logic with rendering logic is an antipattern
+    // return a closure over the component, no other logic here
+
     get TextButton() {
       // pass store into the returned styled component
       return () => <TextButton todo={todo} />
