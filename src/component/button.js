@@ -5,7 +5,7 @@ import { observer } from 'mobx-react'
 export const TextButton = observer(
   ({ todo }) =>
     console.log('TextButton', todo) || (
-      <Button onClick={todo.toggle}>{todo.textButtonText}</Button>
+      <Button onClick={todo.toggle}>koko {todo.textButtonText}</Button>
     )
 )
 
